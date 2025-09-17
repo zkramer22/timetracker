@@ -17,6 +17,8 @@ function App() {
 
             <section id="projects" className='container'>
                 <span className="text-xl font-accent">projects</span>
+
+                
             </section>
             
             <section id="time-entries" className='container'>
