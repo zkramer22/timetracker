@@ -1,7 +1,7 @@
 # frontend
 
 ## Tools 
-React + TypeScript
-Vite
-shadcn/ui
-Lucide
+1. React + TypeScript
+2. Vite
+3. shadcn/ui
+4. Lucide
