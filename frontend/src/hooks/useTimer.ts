@@ -3,6 +3,8 @@ import { useState, useRef, useEffect } from 'react'
 export function useTimer() {
     const [isRunning, setIsRunning] = useState(false)
     const [elapsed, setElapsed] = useState(0)
+    const [taskId, setTaskId] = useState<string | null>(null) // track which task
+
     const startTimeRef = useRef<number | null>(null)
     const intervalRef = useRef<number | null>(null)
 
@@ -27,7 +29,8 @@ export function useTimer() {
         }
     }, [isRunning])
 
-    function start() {
+    function start(id?: string) {
+        if (id) setTaskId(id)
         setIsRunning(true)
     }
 
@@ -38,13 +41,15 @@ export function useTimer() {
     function reset() {
         setIsRunning(false)
         setElapsed(0)
+        setTaskId(null)
     }
 
     return {
         isRunning,
         elapsed,
+        taskId,
         start,
         stop,
-        reset
+        reset,
     }
 }

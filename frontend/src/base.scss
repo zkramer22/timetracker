@@ -1,37 +1,3 @@
-/* Default (light) */
-/* Light defaults */
-:root {
-    --color-bg: #ffffff;
-    --color-text: #111111;
-    --color-accent: #2563eb;
-    --color-inactive: #eeeeee;
-}
-
-/* System preference (auto) */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-bg: #0f172a;
-        --color-text: #f1f5f9;
-        --color-accent: #38bdf8;
-        --color-primary: #f14fee;
-    }
-}
-
-/* Explicit overrides */
-:root[data-theme="light"] {
-    --color-bg: #ffffff !important;
-    --color-text: #111111 !important;
-    --color-accent: #2563eb !important;
-    --color-primary: #ac6eee !important;
-}
-
-:root[data-theme="dark"] {
-    --color-bg: #0f172a !important;
-    --color-text: #f1f5f9 !important;
-    --color-accent: #38bdf8 !important;
-    --color-primary: #f14fee !important;
-}
-
 :root {
     // user-select: none;
     line-height: 1.5;
@@ -47,13 +13,13 @@
 
     /* sizes */
 
-    --button-radius: .25rem;
-    --button-thickness: 2px;
-    --hamburger-size: 3rem;
+    // --button-radius: .25rem;
+    // --button-thickness: 2px;
+    // --hamburger-size: 3rem;
     --section-padding: 1rem;
     --container-padding: 1rem;
     --container-width: 92rem;
-    --logo-size: 3.5rem;
+    // --logo-size: 3.5rem;
 
     /* calcs */
 
@@ -104,7 +70,7 @@ body {
     background-color: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-primary), system-ui, sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    // transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 *, *::before, *::after {
@@ -112,7 +78,7 @@ body {
 }
 
 ::selection {
-    background-color: rgba(152, 149, 193, .9);
+    background-color: rgba(178, 251, 255, 0.9);
 }
 
 section {
@@ -165,45 +131,7 @@ img, video {
     width: 100%;
     height: auto;
 }
-svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
 
-button, input, textarea, select {
-    font-family: inherit;
-    color: inherit;
-}
-
-button {
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: var(--color-primary);
-    cursor: pointer;
-    transition: border-color 0.25s;
-}
-button:hover {
-    border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-}
-
-// button {
-//     border: none;
-//     outline: none;
-//     border-radius: var(--button-radius);
-//     pointer-events: all;
-//     cursor: pointer;
-// }
-// input {
-//     outline: none;
-// }
 ul, ol {
     padding-inline-start: 2.7rem;
 }

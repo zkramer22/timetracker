@@ -4,10 +4,17 @@ import './base.scss'
 import './index.css'
 import './App.scss'
 
-import App from './App.tsx'
+import { TimerProvider } from './context/TimerProvider'
+import { TasksProvider } from './context/TasksProvider'
+
+import App from './App'
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+    <StrictMode>
+        <TimerProvider>
+            <TasksProvider>
+                <App />
+            </TasksProvider>
+        </TimerProvider>
+    </StrictMode>
 )
